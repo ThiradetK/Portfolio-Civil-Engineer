@@ -1,0 +1,120 @@
+.contact {
+  min-height: 92svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--section-y) 0 2rem;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 46%;
+    width: min(680px, 86vw);
+    height: min(680px, 86vw);
+    transform: translate(-50%, -50%) rotate(12deg);
+    border: 1px solid rgba(217, 184, 108, 0.07);
+    background:
+      linear-gradient(90deg, transparent 0 49.8%, rgba(217, 184, 108, 0.055) 50%, transparent 50.2% 100%),
+      linear-gradient(transparent 0 49.8%, rgba(132, 201, 216, 0.04) 50%, transparent 50.2% 100%);
+    opacity: 0.35;
+    animation: contactFrame 34s linear infinite;
+  }
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: clamp(2rem, 5.6vw, 4.25rem);
+  font-weight: 680;
+  letter-spacing: 0;
+  line-height: 1.15;
+  margin-bottom: 3.5rem;
+
+  .line {
+    display: block;
+    overflow: hidden;
+  }
+}
+
+.highlight {
+  color: var(--accent-warm);
+  text-shadow: 0 0 28px rgba(217, 184, 108, 0.14);
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.email {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  color: var(--text);
+  padding: 0.85rem 1.1rem;
+  border: 1px solid rgba(217, 184, 108, 0.32);
+  border-radius: var(--radius);
+  background: var(--spot);
+  transition: border-color 0.3s, opacity 0.3s, transform 0.3s var(--ease-out);
+
+  &:hover {
+    border-color: var(--accent-warm);
+    opacity: 0.85;
+    transform: translateY(-2px);
+  }
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem 2rem;
+
+  a {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    transition: color 0.25s, transform 0.25s var(--ease-out);
+
+    &:hover {
+      color: var(--text);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+@keyframes contactFrame {
+  from {
+    transform: translate(-50%, -50%) rotate(12deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(372deg);
+  }
+}
+
+.footer {
+  margin-top: auto;
+  padding-top: 6rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 640px) {
+  .footer {
+    justify-content: center;
+    text-align: center;
+  }
+}

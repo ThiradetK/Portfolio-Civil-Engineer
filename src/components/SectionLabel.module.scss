@@ -1,0 +1,35 @@
+.label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.marker {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 1px;
+  background: var(--accent-warm);
+  box-shadow: 0 0 0 5px rgba(217, 184, 108, 0.08);
+  transform: rotate(45deg);
+}
+
+.number {
+  font-family: var(--font-mono);
+  color: var(--accent-warm);
+}
+
+.divider {
+  width: clamp(2rem, 5vw, 4rem);
+  height: 1px;
+  background: linear-gradient(90deg, rgba(217, 184, 108, 0.8), transparent);
+}
+
+.text {
+  color: var(--text);
+  font-weight: 600;
+}

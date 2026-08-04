@@ -5,7 +5,7 @@ export const profile = {
   location: "Thailand",
   email: "thiradet.k28@gmail.com",
   phone: "093-131-3874",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/Resume.pdf",
   bio: {
     opening: "My journey began on the ground — not behind a screen.",
     education: {

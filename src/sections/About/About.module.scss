@@ -1,6 +1,7 @@
 .about {
   padding: var(--section-y) 0;
   position: relative;
+  background: #f2f4f1;
 }
 
 .scene {
@@ -8,7 +9,7 @@
 }
 
 .heading {
-  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-size: 3.25rem;
   font-weight: 680;
   letter-spacing: 0;
   max-width: 18ch;
@@ -31,7 +32,7 @@
 
   &:hover {
     transform: translateY(-4px);
-    border-color: rgba(217, 184, 108, 0.34);
+    border-color: rgba(185, 120, 78, 0.34);
     background: var(--surface-hover);
   }
 
@@ -44,7 +45,7 @@
   }
 
   h3 {
-    font-size: clamp(1.55rem, 3vw, 2rem);
+    font-size: 2rem;
     margin: 0.5rem 0 0.25rem;
   }
 
@@ -55,7 +56,7 @@
 
 .eduLabel {
   font-size: 0.7rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0;
   text-transform: uppercase;
   color: var(--text-dim);
 }
@@ -102,7 +103,7 @@
 
 .transitionText {
   max-width: 54ch;
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: 1.2rem;
   color: var(--text-muted);
   line-height: 1.7;
 }
@@ -114,14 +115,14 @@
   padding: clamp(1.5rem, 3.5vw, 2.5rem);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, rgba(120, 213, 247, 0.06), rgba(255, 255, 255, 0.02));
+  background: linear-gradient(135deg, rgba(84, 122, 98, 0.08), rgba(255, 255, 255, 0.5));
   overflow: hidden;
 
   &::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(120deg, transparent 0 38%, rgba(132, 201, 216, 0.04) 48%, transparent 58% 100%);
+    background: linear-gradient(120deg, transparent 0 38%, rgba(84, 122, 98, 0.04) 48%, transparent 58% 100%);
     transform: translateX(-70%);
     animation: currentSweep 9s var(--ease-in-out) infinite;
   }
@@ -135,13 +136,13 @@
 .role {
   .roleLabel {
     font-size: 0.7rem;
-    letter-spacing: 0.12em;
+    letter-spacing: 0;
     text-transform: uppercase;
     color: var(--text-dim);
   }
 
   h3 {
-    font-size: clamp(1.7rem, 4vw, 2.65rem);
+    font-size: 2.4rem;
     margin: 0.4rem 0 0.25rem;
     color: var(--accent-warm);
   }
@@ -166,7 +167,7 @@
 
 .trait {
   padding: 0.4rem 0.9rem;
-  border: 1px solid rgba(217, 184, 108, 0.22);
+  border: 1px solid rgba(185, 120, 78, 0.22);
   border-radius: var(--radius);
   font-size: 0.85rem;
   color: var(--text);
@@ -175,8 +176,8 @@
 
   &:hover {
     transform: translateY(-2px);
-    border-color: rgba(217, 184, 108, 0.36);
-    background: rgba(217, 184, 108, 0.16);
+    border-color: rgba(185, 120, 78, 0.36);
+    background: rgba(185, 120, 78, 0.16);
   }
 }
 
@@ -201,7 +202,7 @@
 
   h4 {
     font-size: 0.75rem;
-    letter-spacing: 0.1em;
+    letter-spacing: 0;
     text-transform: uppercase;
     color: var(--accent-warm);
     margin-bottom: 1rem;
@@ -239,12 +240,12 @@
 
 .vision {
   grid-column: 1 / -1;
-  border-color: rgba(217, 184, 108, 0.3);
-  background: linear-gradient(135deg, rgba(217, 184, 108, 0.1), rgba(132, 201, 216, 0.035));
+  border-color: rgba(185, 120, 78, 0.3);
+  background: linear-gradient(135deg, rgba(185, 120, 78, 0.1), rgba(84, 122, 98, 0.035));
 
   p {
     color: var(--text);
-    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    font-size: 1.2rem;
   }
 }
 
@@ -279,6 +280,14 @@
   .vision {
     grid-column: 1 / -1;
   }
+}
+
+@media (max-width: 640px) {
+  .heading { font-size: 2.25rem; }
+  .eduCard h3 { font-size: 1.55rem; }
+  .transitionText { font-size: 1rem; }
+  .role h3 { font-size: 1.75rem; }
+  .vision p { font-size: 1.05rem; }
 }
 
 @media (min-width: 1024px) {
